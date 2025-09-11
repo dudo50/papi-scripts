@@ -14,6 +14,7 @@
     "@galacticcouncil/sdk": "^9.6.1",
     "@paraspell/sdk": "^10.8.3",
     "@paraspell/xcm-router": "^10.10.3",
+    "@paraspell/assets":"^10.10.3",
     "@polkadot-api/descriptors": "file:.papi/descriptors",
     "@polkadot-labs/hdkd": "^0.0.19",
     "@polkadot-labs/hdkd-helpers": "^0.0.19",

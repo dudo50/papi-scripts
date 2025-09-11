@@ -72,6 +72,7 @@ const performRemoteDelegation = async () => {
     );
 
     console.log("Dry Run Result:", JSON.stringify(dryRunCall, null, 2));
+
     // 5. Sign and send the transaction
     const txHash = await tx.signAndSend(otherPair);
     console.log(`Submitted with hash ${txHash}`);

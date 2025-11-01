@@ -1,4 +1,4 @@
-// import { chainSpec } from "polkadot-api/chains/paseo_people"
+import { chainSpec } from "polkadot-api/chains/paseo"
 import { getSmProvider } from "polkadot-api/sm-provider"
 import { start } from "polkadot-api/smoldot"
 import { paseo_people, wnd } from "@polkadot-api/descriptors"
@@ -12,7 +12,7 @@ import { getExchangeAssets, getExchangePairs } from "@paraspell/xcm-router";
 import { sr25519CreateDerive } from "@polkadot-labs/hdkd";
 import { getPolkadotSigner } from "polkadot-api/signer";
 
-import { chainSpec } from "polkadot-api/chains/westend2"
+// import { chainSpec } from "polkadot-api/chains/westend2"
 
 
 dotenv.config();

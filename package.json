@@ -12,9 +12,9 @@
   "description": "",
   "dependencies": {
     "@galacticcouncil/sdk": "^9.6.1",
-    "@paraspell/sdk": "^10.8.3",
-    "@paraspell/xcm-router": "^10.10.3",
-    "@paraspell/assets":"^10.10.3",
+    "@paraspell/sdk": "11.12.9",
+    "@paraspell/xcm-router": "11.12.9",
+    "@paraspell/assets":"10.10.3",
     "@polkadot-api/descriptors": "file:.papi/descriptors",
     "@polkadot-labs/hdkd": "^0.0.19",
     "@polkadot-labs/hdkd-helpers": "^0.0.19",
@@ -24,7 +24,7 @@
     "@polkadot/util-crypto": "^13.5.3",
     "@subsquid/ss58": "^2.0.2",
     "dotenv": "^16.5.0",
-    "polkadot-api": "^1.14.1",
+    "polkadot-api": "^1.19.0",
     "viem": "^2.33.3"
   },
   "devDependencies": {

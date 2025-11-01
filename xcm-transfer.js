@@ -21,7 +21,7 @@ dotenv.config()
 import { getPolkadotSigner } from "polkadot-api/signer"
 const RECIPIENT_ADDRESS = '1242mFMeQNy4yoW46P95wobVwsV2WGjoszVPTNbwp1dAqqnf'; // This is agent wallet 
 const AMOUNT = '100000000';
-
+const AMOUNT_PAS = '10000000000';
 
 
 const mnemonic = process.env.MNEMONIC_PHRASE
@@ -37,10 +37,14 @@ console.log("Address: ", address)
 // const client = createClient(getSmProvider(smoldot.addChain({ chainSpec: polkadotAssetHubSpec })))
 // const api = createApiInstanceForNode('AssetHubPolkadot')
 
-const POLKADOT_ASSET_HUB_URL = "wss://statemint.api.onfinality.io/public-ws"
-const client = createClient(getWsProvider(POLKADOT_ASSET_HUB_URL));
+// const POLKADOT_ASSET_HUB_URL = "wss://statemint.api.onfinality.io/public-ws"
+// const client = createClient(getWsProvider(POLKADOT_ASSET_HUB_URL));
 // const typedApi = client.getTypedApi(dot);
 
+
+
+const POLKADOT_ASSET_HUB_URL = "wss://paseo-rpc.n.dwellir.com"
+const client = createClient(getWsProvider(POLKADOT_ASSET_HUB_URL));
 const signer = getPolkadotSigner(
     keypair.publicKey,
     "Sr25519",
@@ -54,10 +58,10 @@ async function xcmTransfer() {
 
         // Construct XCM transfer using ParaSpell Builder
         const tx = await Builder(POLKADOT_ASSET_HUB_URL)
-            .from('AssetHubPolkadot') // Source: Polkadot Asset Hub (Westend)
+            .from('Paseo') // Source: Polkadot Asset Hub (Westend)
             .senderAddress(address)
-            .to('Polkadot') // Destination: Polkadot Relay Chain (Westend)
-            .currency({ symbol: 'DOT', amount: AMOUNT }) // Native token (WND for Westend, use 'DOT' for Polkadot mainnet)
+            .to('AssetHubPaseo') // Destination: Polkadot Relay Chain (Westend)
+            .currency({ symbol: 'PAS', amount: AMOUNT_PAS }) // Native token (WND for Westend, use 'DOT' for Polkadot mainnet)
             .address(RECIPIENT_ADDRESS)
             .build();
 

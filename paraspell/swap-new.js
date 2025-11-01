@@ -40,8 +40,12 @@ function isPairSupported(sourceCurrency, destinationCurrency, exchangePairs = pa
 }
 
 export function signerOf() {
+  if (!process.env.PRIVATE_KEY) {
+    throw new Error('PRIVATE_KEY environment variable is not set');
+  }
   
-  const seed = process.env.PRIVATE_KEY;
+  // If using a mnemonic phrase
+  const seed = entropyToMiniSecret(mnemonicToEntropy(process.env.PRIVATE_KEY));
   const derive = sr25519CreateDerive(seed);
   const aliceKeyPair = derive("");
   return getPolkadotSigner(

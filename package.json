@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "pairs": "node pairs.js",
-    "swap": "node swap.js"
+    "pairs": "node paraspell/pairs.js",
+    "swap": "node paraspell/swap-new.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,7 @@
     "@galacticcouncil/sdk": "^9.6.1",
     "@paraspell/sdk": "11.12.9",
     "@paraspell/xcm-router": "11.12.9",
-    "@paraspell/assets":"10.10.3",
+    "@paraspell/assets":"11.12.9",
     "@polkadot-api/descriptors": "file:.papi/descriptors",
     "@polkadot-labs/hdkd": "^0.0.19",
     "@polkadot-labs/hdkd-helpers": "^0.0.19",

@@ -1,0 +1,81 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "message",
+				"type": "bytes"
+			},
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "refTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "proofSize",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct IXcm.Weight",
+				"name": "weight",
+				"type": "tuple"
+			}
+		],
+		"name": "execute",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "destination",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "message",
+				"type": "bytes"
+			}
+		],
+		"name": "send",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes",
+				"name": "message",
+				"type": "bytes"
+			}
+		],
+		"name": "weighMessage",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint64",
+						"name": "refTime",
+						"type": "uint64"
+					},
+					{
+						"internalType": "uint64",
+						"name": "proofSize",
+						"type": "uint64"
+					}
+				],
+				"internalType": "struct IXcm.Weight",
+				"name": "weight",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
